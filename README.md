@@ -2,15 +2,17 @@
 
 Simple React app to display Google Trends
 
-Run live on [Stackblitz](https://stackblitz.com/github/JochenFromm/block-trends).
+Uses the [rss-parser](https://www.npmjs.com/package/rss-parser) NPM package to parse the [Google Trends RSS feed](https://trends.google.com/trends/hottrends/atom/feed).
+
+Run live on [Stackblitz](https://stackblitz.com/github/JochenFromm/block-trends) (currently not supported)
 
 This project uses currently React 16.2 and was generated with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Development server
 
-Run `yarn start` for a dev server.
+Install NodeJS packages with `yarn install` and run `yarn start` to start a dev server.
 
-Below you will find some information on how to perform common tasks.<br>
+Below you will find the generated information on how to perform common tasks for projects that have been created by "create-react-app".<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Table of Contents
