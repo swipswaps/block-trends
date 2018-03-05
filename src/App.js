@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import Box from './Box';
 import Parser from 'rss-parser';
 
 class App extends Component {
@@ -21,45 +21,37 @@ class App extends Component {
 
   componentDidMount() {
     let parser = new Parser();
-    const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
+    const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
+    const TRENDS_URL = 'https://trends.google.com/trends/hottrends/atom/feed'
     let items = [];
 
-    parser.parseURL(CORS_PROXY + 'https://trends.google.com/trends/hottrends/atom/feed', (err, feed) => {
+    parser.parseURL(CORS_PROXY + TRENDS_URL, (err, feed) => {
       feed.items.forEach(function(entry) {
-        items.push({title: entry.title, link: entry.link});
+        items.push({ title: entry.title, link: entry.link });
       })
       this.setState({ items: items });
     })
+
+    setInterval(this.tick, 1000);
   }
 
-  boxSize() {
-    const width = window.innerWidth / this.state.columns;
-    const height = window.innerHeight / this.state.rows;
-    return {
-      width,
-      height,
-      fontSize: '24px',
-      lineHeight: height + 'px',
-      verticalAlign: 'middle',
+  box(trend, index) {
+    const props = {
+      key: index,
+      trend: trend,
+      color: this.randomColor(),
+      width: `${100 / this.state.columns}%`,
+      height: window.innerHeight / this.state.rows,
     }
-  }
-
-  box(trend) {
     return (
-      <div className={'box '+this.randomColor()}
-           key={'t'+trend.title}
-           style={ this.boxSize() }>
-        <a href={'https://www.google.com/search?q='+trend.title}>{trend.title}</a>
-      </div>
+      <Box {...props} ></Box>
     );
   }
 
   render() {
     return (
-      <div className="App">
-        <div className="grid">
-          { this.state.items.map((trend) => this.box(trend)) }
-        </div>
+      <div className="grid">
+        { this.state.items.map((trend, i) => this.box(trend, i)) }
       </div>
     );
   }

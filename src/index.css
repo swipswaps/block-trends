@@ -5,12 +5,18 @@ body {
 }
 
 .grid {
+  text-align: center;
   overflow: hidden;
 }
 
 .box {
   display: inline-block;
   vertical-align: middle;
+}
+
+.typing {
+  border-right: 1px solid #fff;
+  padding-right: 10px;
 }
 
 .box a {
