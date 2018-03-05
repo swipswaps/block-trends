@@ -33,12 +33,14 @@ class App extends Component {
   }
 
   boxSize() {
+    const width = window.innerWidth / this.state.columns;
+    const height = window.innerHeight / this.state.rows;
     return {
-      width: window.innerWidth / this.state.columns,
-      height: window.innerHeight / this.state.rows,
-      'font-size': '24px',
-      'line-height': window.innerHeight / this.state.rows,
-      'vertical-align': 'middle',
+      width,
+      height,
+      fontSize: '24px',
+      lineHeight: height + 'px',
+      verticalAlign: 'middle',
     }
   }
 
