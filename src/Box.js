@@ -9,11 +9,6 @@ class Box extends Component {
     this.tock = this.tock.bind(this);
   }
 
-  randomColor() {
-    const colors = ['yellow', 'red', 'green', 'blue'];
-    return colors[Math.floor(Math.random() * colors.length)];
-  }
-
   componentDidMount() {
     this.tick();
   }

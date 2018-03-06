@@ -4,25 +4,7 @@ import ReactFlagsSelect from 'react-flags-select';
 import 'react-flags-select/css/react-flags-select.css';
 import Box from './Box';
 import Parser from 'rss-parser';
-
-const mapping = {
-  US: 'p1',
-  IN: 'p3',
-  JP: 'p4',
-  IL: 'p6',
-  GB: 'p8',
-  UK: 'p9',
-  CA: 'p14',
-  RU: 'p14',
-  DE: 'p15',
-  FR: 'p16',
-  NL: 'p17',
-  BR: 'p18',
-  TR: 'p24',
-  ES: 'p26',
-  IT: 'p27',
-  PL: 'p31',
-}
+import { colors, mapping } from './constants';
 
 class App extends Component {
   constructor(props) {
@@ -39,7 +21,6 @@ class App extends Component {
   }
 
   randomColor() {
-    const colors = ['yellow', 'red', 'green', 'blue'];
     return colors[Math.floor(Math.random() * colors.length)];
   }
 
