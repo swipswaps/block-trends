@@ -9,6 +9,10 @@ body {
   overflow: hidden;
 }
 
+.grid .flag-select {
+  position: absolute;
+}
+
 .box {
   display: inline-block;
   vertical-align: middle;

@@ -1,8 +1,9 @@
 # Block-Trends
 
-Simple React app to display Google Trends
+Simple React app to display Google Trends, similar to
+the real [Hot Trends site](https://trends.google.com/trends/hottrends/visualize?nrow=3&ncol=3)
 
-Uses the [rss-parser](https://www.npmjs.com/package/rss-parser) NPM package to parse the [Google Trends RSS feed](https://trends.google.com/trends/hottrends/atom/feed).
+Uses the [rss-parser](https://www.npmjs.com/package/rss-parser) NPM package to parse the [Google Trends RSS feed](https://trends.google.com/trends/hottrends/atom/feed?pn=p1) and the [react-flags-select](https://www.npmjs.com/package/react-flags-select) NPM package to switch between countries.
 
 Run live on [Stackblitz](https://stackblitz.com/github/JochenFromm/block-trends) (currently not supported)
 

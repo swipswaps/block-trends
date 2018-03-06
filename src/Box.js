@@ -18,6 +18,10 @@ class Box extends Component {
     this.tick();
   }
 
+  componentWillReceiveProps() {
+    this.setState({ seconds: 0 });
+  }
+
   tick() {
     setTimeout(this.tock, Math.random()*1000);
   }
@@ -31,7 +35,7 @@ class Box extends Component {
     return {
       width: this.props.width,
       height: this.props.height,
-      fontSize: '24px',
+      fontSize: '32px',
       lineHeight: this.props.height + 'px',
       verticalAlign: 'middle',
     }
