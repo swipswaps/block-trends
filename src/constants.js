@@ -6,8 +6,8 @@ const mapping = {
   IN: 'p3',
   JP: 'p4',
   IL: 'p6',
-  GB: 'p8',
-  UK: 'p9',
+  AU: 'p8',
+  GB: 'p9',
   CA: 'p14',
   RU: 'p14',
   DE: 'p15',
@@ -18,6 +18,8 @@ const mapping = {
   ES: 'p26',
   IT: 'p27',
   PL: 'p31',
+  GR: 'p48',
+  DK: 'p49',
 }
 
 export {

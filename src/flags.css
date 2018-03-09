@@ -1,0 +1,311 @@
+
+/* simple dropdown */
+
+.dropdown-field {
+  position: absolute;
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown-container {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+}
+
+ul.dropdown-content {
+  display: none;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  background-color: #fff;
+  color: black;
+  padding: 1px 14px;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li:hover {
+  background-color: #ddd;
+}
+
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-container:hover .dropdown-field {
+  background-color: #ccc;
+}
+
+/* see https://github.com/lafeber/world-flags-sprite */
+
+.flag {
+  background:url(flags.png) no-repeat;
+  margin: 0px;
+  padding: 0px;
+  width: 50px;
+  height: 29px;
+  display: inline-block;
+}
+
+li.flag {
+  width: 152px;
+  height: 12px;
+}
+
+._African_Union{ background-position:12px -32px; }
+._Arab_League{ background-position:12px -64px; }
+._ASEAN{ background-position:12px -96px; }
+._CARICOM{ background-position:12px -128px; }
+._CIS{ background-position:12px -160px; }
+._Commonwealth{ background-position:12px -192px; }
+._England{ background-position:12px -224px; }
+._European_Union{ background-position:12px -256px; }
+._Islamic_Conference{ background-position:12px -288px; }
+._Kosovo{ background-position:12px -320px; }
+._NATO{ background-position:12px -352px; }
+._Northern_Cyprus{ background-position:12px -384px; }
+._Northern_Ireland{ background-position:12px -416px; }
+._Olimpic_Movement{ background-position:12px -448px; }
+._OPEC{ background-position:12px -480px; }
+._Red_Cross{ background-position:12px -512px; }
+._Scotland{ background-position:12px -544px; }
+._Somaliland{ background-position:12px -576px; }
+._Tibet{ background-position:12px -608px; }
+._United_Nations{ background-position:12px -640px; }
+._Wales{ background-position:12px -672px; }
+
+span.ad{ background-position:12px -704px; }
+span.ae{ background-position:12px -736px; }
+span.af{ background-position:12px -768px; }
+span.ag{ background-position:12px -800px; }
+span.ai{ background-position:12px -832px; }
+span.al{ background-position:12px -864px; }
+span.am{ background-position:12px -896px; }
+span.an{ background-position:12px -928px; }
+span.ao{ background-position:12px -960px; }
+span.aq{ background-position:12px -992px; }
+span.ar{ background-position:12px -1024px; }
+span.as{ background-position:12px -1056px; }
+span.at{ background-position:12px -1088px; }
+span.au{ background-position:12px -1120px; }
+span.aw{ background-position:12px -1152px; }
+span.az{ background-position:12px -1184px; }
+span.ba{ background-position:12px -1216px; }
+span.bb{ background-position:12px -1248px; }
+span.bd{ background-position:12px -1280px; }
+span.be{ background-position:12px -1312px; }
+span.bf{ background-position:12px -1344px; }
+span.bg{ background-position:12px -1376px; }
+span.bh{ background-position:12px -1408px; }
+span.bi{ background-position:12px -1440px; }
+span.bj{ background-position:12px -1472px; }
+span.bm{ background-position:12px -1504px; }
+span.bn{ background-position:12px -1536px; }
+span.bo{ background-position:12px -1568px; }
+span.br{ background-position:12px -1600px; }
+span.bs{ background-position:12px -1632px; }
+span.bt{ background-position:12px -1664px; }
+span.bw{ background-position:12px -1696px; }
+span.by{ background-position:12px -1728px; }
+span.bz{ background-position:12px -1760px; }
+span.ca{ background-position:12px -1792px; }
+span.cd{ background-position:12px -1824px; }
+span.cf{ background-position:12px -1856px; }
+span.cg{ background-position:12px -1888px; }
+span.ch{ background-position:12px -1920px; }
+span.ci{ background-position:12px -1952px; }
+span.ck{ background-position:12px -1984px; }
+span.cl{ background-position:12px -2016px; }
+span.cm{ background-position:12px -2048px; }
+span.cn{ background-position:12px -2080px; }
+span.co{ background-position:12px -2112px; }
+span.cr{ background-position:12px -2144px; }
+span.cu{ background-position:12px -2176px; }
+span.cv{ background-position:12px -2208px; }
+span.cy{ background-position:12px -2240px; }
+span.cz{ background-position:12px -2272px; }
+span.de{ background-position:12px -2304px; }
+span.jn{ background-position:12px -2304px; }
+span.dj{ background-position:12px -2336px; }
+span.dk{ background-position:12px -2368px; }
+span.dm{ background-position:12px -2400px; }
+span.do{ background-position:12px -2432px; }
+span.dz{ background-position:12px -2464px; }
+span.ec{ background-position:12px -2496px; }
+span.ee{ background-position:12px -2528px; }
+span.eg{ background-position:12px -2560px; }
+span.eh{ background-position:12px -2592px; }
+span.er{ background-position:12px -2624px; }
+span.es{ background-position:12px -2656px; }
+span.et{ background-position:12px -2688px; }
+span.fi{ background-position:12px -2720px; }
+span.fj{ background-position:12px -2752px; }
+span.fm{ background-position:12px -2784px; }
+span.fo{ background-position:12px -2816px; }
+span.fr{ background-position:12px -2848px; }
+span.ga{ background-position:12px -2880px; }
+span.gb{ background-position:12px -2912px; }
+span.gd{ background-position:12px -2944px; }
+span.ge{ background-position:12px -2976px; }
+span.gg{ background-position:12px -3008px; }
+span.gh{ background-position:12px -3040px; }
+span.gi{ background-position:12px -3072px; }
+span.gl{ background-position:12px -3104px; }
+span.gm{ background-position:12px -3136px; }
+span.gn{ background-position:12px -3168px; }
+span.gp{ background-position:12px -3200px; }
+span.gq{ background-position:12px -3232px; }
+span.gr{ background-position:12px -3264px; }
+span.gt{ background-position:12px -3296px; }
+span.gu{ background-position:12px -3328px; }
+span.gw{ background-position:12px -3360px; }
+span.gy{ background-position:12px -3392px; }
+span.hk{ background-position:12px -3424px; }
+span.hn{ background-position:12px -3456px; }
+span.hr{ background-position:12px -3488px; }
+span.ht{ background-position:12px -3520px; }
+span.hu{ background-position:12px -3552px; }
+span.id{ background-position:12px -3584px; }
+span.mc{ background-position:12px -3584px; }
+span.ie{ background-position:12px -3616px; }
+span.il{ background-position:12px -3648px; }
+span.im{ background-position:12px -3680px; }
+span.in{ background-position:12px -3712px; }
+span.iq{ background-position:12px -3744px; }
+span.ir{ background-position:12px -3776px; }
+span.is{ background-position:12px -3808px; }
+span.it{ background-position:12px -3840px; }
+span.je{ background-position:12px -3872px; }
+span.jm{ background-position:12px -3904px; }
+span.jo{ background-position:12px -3936px; }
+span.jp{ background-position:12px -3968px; }
+span.ke{ background-position:12px -4000px; }
+span.kg{ background-position:12px -4032px; }
+span.kh{ background-position:12px -4064px; }
+span.ki{ background-position:12px -4096px; }
+span.km{ background-position:12px -4128px; }
+span.kn{ background-position:12px -4160px; }
+span.kp{ background-position:12px -4192px; }
+span.kr{ background-position:12px -4224px; }
+span.kw{ background-position:12px -4256px; }
+span.ky{ background-position:12px -4288px; }
+span.kz{ background-position:12px -4320px; }
+span.la{ background-position:12px -4352px; }
+span.lb{ background-position:12px -4384px; }
+span.lc{ background-position:12px -4416px; }
+span.li{ background-position:12px -4448px; }
+span.lk{ background-position:12px -4480px; }
+span.lr{ background-position:12px -4512px; }
+span.ls{ background-position:12px -4544px; }
+span.lt{ background-position:12px -4576px; }
+span.lu{ background-position:12px -4608px; }
+span.lv{ background-position:12px -4640px; }
+span.ly{ background-position:12px -4672px; }
+span.ma{ background-position:12px -4704px; }
+span.md{ background-position:12px -4736px; }
+span.me{ background-position:12px -4768px; }
+span.mg{ background-position:12px -4800px; }
+span.mh{ background-position:12px -4832px; }
+span.mk{ background-position:12px -4864px; }
+span.ml{ background-position:12px -4896px; }
+span.mm{ background-position:12px -4928px; }
+span.mn{ background-position:12px -4960px; }
+span.mo{ background-position:12px -4992px; }
+span.mq{ background-position:12px -5024px; }
+span.mr{ background-position:12px -5056px; }
+span.ms{ background-position:12px -5088px; }
+span.mt{ background-position:12px -5120px; }
+span.mu{ background-position:12px -5152px; }
+span.mv{ background-position:12px -5184px; }
+span.mw{ background-position:12px -5216px; }
+span.mx{ background-position:12px -5248px; }
+span.my{ background-position:12px -5280px; }
+span.mz{ background-position:12px -5312px; }
+span.na{ background-position:12px -5344px; }
+span.nc{ background-position:12px -5376px; }
+span.ne{ background-position:12px -5408px; }
+span.ng{ background-position:12px -5440px; }
+span.ni{ background-position:12px -5472px; }
+span.nl{ background-position:12px -5504px; }
+span.no{ background-position:12px -5536px; }
+span.np{ background-position:12px -5568px; }
+span.nr{ background-position:12px -5600px; }
+span.nz{ background-position:12px -5632px; }
+span.om{ background-position:12px -5664px; }
+span.pa{ background-position:12px -5696px; }
+span.pe{ background-position:12px -5728px; }
+span.pf{ background-position:12px -5760px; }
+span.pg{ background-position:12px -5792px; }
+span.ph{ background-position:12px -5824px; }
+span.pk{ background-position:12px -5856px; }
+span.pl{ background-position:12px -5888px; }
+span.pr{ background-position:12px -5920px; }
+span.ps{ background-position:12px -5952px; }
+span.pt{ background-position:12px -5984px; }
+span.pw{ background-position:12px -6016px; }
+span.py{ background-position:12px -6048px; }
+span.qa{ background-position:12px -6080px; }
+span.re{ background-position:12px -6112px; }
+span.ro{ background-position:12px -6144px; }
+span.rs{ background-position:12px -6176px; }
+span.ru{ background-position:12px -6208px; }
+span.rw{ background-position:12px -6240px; }
+span.sa{ background-position:12px -6272px; }
+span.sb{ background-position:12px -6304px; }
+span.sc{ background-position:12px -6336px; }
+span.sd{ background-position:12px -6368px; }
+span.se{ background-position:12px -6400px; }
+span.sg{ background-position:12px -6432px; }
+span.si{ background-position:12px -6464px; }
+span.sk{ background-position:12px -6496px; }
+span.sl{ background-position:12px -6528px; }
+span.sm{ background-position:12px -6560px; }
+span.sn{ background-position:12px -6592px; }
+span.so{ background-position:12px -6624px; }
+span.sr{ background-position:12px -6656px; }
+span.st{ background-position:12px -6688px; }
+span.sv{ background-position:12px -6720px; }
+span.sy{ background-position:12px -6752px; }
+span.sz{ background-position:12px -6784px; }
+span.tc{ background-position:12px -6816px; }
+span.td{ background-position:12px -6848px; }
+span.tg{ background-position:12px -6880px; }
+span.th{ background-position:12px -6912px; }
+span.tj{ background-position:12px -6944px; }
+span.tl{ background-position:12px -6976px; }
+span.tm{ background-position:12px -7008px; }
+span.tn{ background-position:12px -7040px; }
+span.to{ background-position:12px -7072px; }
+span.tr{ background-position:12px -7104px; }
+span.tt{ background-position:12px -7136px; }
+span.tv{ background-position:12px -7168px; }
+span.tw{ background-position:12px -7200px; }
+span.tz{ background-position:12px -7232px; }
+span.ua{ background-position:12px -7264px; }
+span.ug{ background-position:12px -7296px; }
+span.us{ background-position:12px -7328px; }
+span.uy{ background-position:12px -7360px; }
+span.uz{ background-position:12px -7392px; }
+span.va{ background-position:12px -7424px; }
+span.vc{ background-position:12px -7456px; }
+span.ve{ background-position:12px -7488px; }
+span.vg{ background-position:12px -7520px; }
+span.vi{ background-position:12px -7552px; }
+span.vn{ background-position:12px -7584px; }
+span.vu{ background-position:12px -7616px; }
+span.ws{ background-position:12px -7648px; }
+span.ye{ background-position:12px -7680px; }
+span.za{ background-position:12px -7712px; }
+span.zm{ background-position:12px -7744px; }
+span.zw{ background-position:12px -7776px; }

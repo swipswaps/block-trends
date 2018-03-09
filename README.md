@@ -5,7 +5,7 @@ the real [Hot Trends site](https://trends.google.com/trends/hottrends/visualize?
 
 Uses the [rss-parser](https://www.npmjs.com/package/rss-parser) NPM package to parse the [Google Trends RSS feed](https://trends.google.com/trends/hottrends/atom/feed?pn=p1) and the [react-flags-select](https://www.npmjs.com/package/react-flags-select) NPM package to switch between countries.
 
-Run live on [Stackblitz](https://stackblitz.com/github/JochenFromm/block-trends) (currently not supported)
+Run live on [Stackblitz](https://stackblitz.com/github/JochenFromm/block-trends)
 
 This project uses currently React 16.2 and was generated with [Create React App](https://github.com/facebookincubator/create-react-app).
 

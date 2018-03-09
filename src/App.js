@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import ReactFlagsSelect from 'react-flags-select';
-import 'react-flags-select/css/react-flags-select.css';
+import './flags.css';
+import CountrySelect from './CountrySelect';
 import Box from './Box';
 import Parser from 'rss-parser';
 import { colors, mapping } from './constants';
@@ -64,7 +63,7 @@ class App extends Component {
   render() {
     return (
       <div className="grid">
-        <ReactFlagsSelect
+        <CountrySelect
           onSelect={this.onSelectFlag}
           defaultCountry="US"
           countries={Object.keys(mapping)} />
