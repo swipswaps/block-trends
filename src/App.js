@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './flags.css';
 import CountrySelect from './CountrySelect';
 import Box from './Box';
-import Parser from 'rss-parser';
+import parser from 'rss-parser';
 import { colors, mapping } from './constants';
 
 class App extends Component {
@@ -24,14 +24,13 @@ class App extends Component {
   }
 
   fetchData(country) {
-    let parser = new Parser();
     const options = `pn=${mapping[country]}`
     const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
     const TRENDS_URL = 'https://trends.google.com/trends/hottrends/atom/feed?'+options
     let items = [];
 
-    parser.parseURL(CORS_PROXY + TRENDS_URL, (err, feed) => {
-      feed.items.forEach(function(entry) {
+    parser.parseURL(CORS_PROXY + TRENDS_URL, (err, parsed) => {
+      parsed.feed.entries.forEach(function(entry) {
         items.push({ title: entry.title, link: entry.link });
       })
       this.setState({ country: country, items: items });
