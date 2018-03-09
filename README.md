@@ -1,5 +1,7 @@
 # Block-Trends
 
+[![Build Status](https://travis-ci.org/JochenFromm/block-trends.svg)](https://travis-ci.org/JochenFromm/block-trends)
+
 Simple React app to display Google Trends, similar to
 the real [Hot Trends site](https://trends.google.com/trends/hottrends/visualize?nrow=3&ncol=3)
 

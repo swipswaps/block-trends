@@ -38,7 +38,8 @@ class CountrySelect extends Component {
   }
 
   flag() {
-    return `flag ${this.state.country.toLowerCase()}`;
+    const country = this.state.country || '';
+    return `flag ${country.toLowerCase()}`;
   }
 
   render() {

@@ -7,14 +7,11 @@ jest.useFakeTimers();
 it('renders without crashing', () => {
   const div = document.createElement('div');
   const props = {
-    key: 0,
-    trend: {title: 'title', link: '#'},
-    color: 'red',
-    width: 100,
-    height: 100,
+    defaultCountry: 'US',
+    countries: ['DE', 'IT', 'US'],
   }
 
   ReactDOM.render(<CountrySelect {...props} />, div);
-  expect(setTimeout).toHaveBeenCalledTimes(1);
+  expect(setTimeout).toHaveBeenCalledTimes(0);
   ReactDOM.unmountComponentAtNode(div);
 });
