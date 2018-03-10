@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class SelectItem extends Component {
+class ListItem extends Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
@@ -51,7 +51,7 @@ class CountrySelect extends Component {
         <ul className='dropdown-content'>
           {
             this.props.countries.map((country) =>
-              <SelectItem key={country} item={country} onItemClick={this.handleClick} />
+              <ListItem key={country} item={country} onItemClick={this.handleClick} />
             )
           }
         </ul>

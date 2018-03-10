@@ -25,15 +25,16 @@ it('renders without crashing', () => {
 it('renders title', () => {
   configure({ adapter: new Adapter() });
   const wrapper = shallow(<Box {...props} />);
-  wrapper.setState({ seconds: 0 });
-  let welcome = <a href="https://www.google.com/search?q=boxtitle"><span className="typing"></span></a>;
   wrapper.setState({ seconds: 1 });
-  welcome = <a href="https://www.google.com/search?q=boxtitle"><span className="typing">b</span></a>;
+  let link = <a href="https://www.google.com/search?q=boxtitle"><span className="typing">b</span></a>;
+  expect(wrapper).toContainReact(link)
   wrapper.setState({ seconds: 2 });
-  welcome = <a href="https://www.google.com/search?q=boxtitle"><span className="typing">bo</span></a>;
+  link = <a href="https://www.google.com/search?q=boxtitle"><span className="typing">bo</span></a>;
+  expect(wrapper).toContainReact(link)
   wrapper.setState({ seconds: 3 });
-  welcome = <a href="https://www.google.com/search?q=boxtitle"><span className="typing">box</span></a>;
+  link = <a href="https://www.google.com/search?q=boxtitle"><span className="typing">box</span></a>;
+  expect(wrapper).toContainReact(link)
   wrapper.setState({ seconds: 8 });
-  welcome = <a href="https://www.google.com/search?q=boxtitle"><span className="full">boxtitle</span></a>;
-  expect(wrapper).toContainReact(welcome)
+  link = <a href="https://www.google.com/search?q=boxtitle"><span className="full">boxtitle</span></a>;
+  expect(wrapper).toContainReact(link)
 });
