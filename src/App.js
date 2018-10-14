@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './flags.css';
 import CountrySelect from './CountrySelect';
 import Box from './Box';
-import parser from 'rss-parser';
+import Parser from 'rss-parser';
 import { colors, mapping } from './constants';
 
 class App extends Component {
@@ -29,8 +29,10 @@ class App extends Component {
     const TRENDS_URL = 'https://trends.google.com/trends/hottrends/atom/feed?'+options
     let items = [];
 
+    let parser = new Parser();
     parser.parseURL(CORS_PROXY + TRENDS_URL, (err, parsed) => {
       if (!parsed) { return null; }
+      console.log(parsed)
       parsed.feed.entries.forEach(function(entry) {
         items.push({ title: entry.title, link: entry.link });
       })

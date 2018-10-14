@@ -6390,12 +6390,12 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^2.0.0"
     inherits "^2.0.1"
 
-rss-parser@2.12.1:
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/rss-parser/-/rss-parser-2.12.1.tgz#f3e2b454a0e6cfe0f64e02f93dedc4fa27ae86dd"
+rss-parser@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/rss-parser/-/rss-parser-3.5.2.tgz#fca07638d3fda43cefdb31f6f7aae5c5856a3175"
   dependencies:
     entities "^1.1.1"
-    xml2js "^0.4.17"
+    xml2js "^0.4.19"
 
 rst-selector-parser@^2.2.3:
   version "2.2.3"
@@ -7619,7 +7619,7 @@ xml-name-validator@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-3.0.0.tgz#6ae73e06de4d8c6e47f9fb181f78d648ad457c6a"
 
-xml2js@^0.4.17:
+xml2js@^0.4.19:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.19.tgz#686c20f213209e94abf0d1bcf1efaa291c7827a7"
   dependencies:
