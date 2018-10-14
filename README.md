@@ -15,7 +15,10 @@ This project uses currently React 16.2 and was generated with [Create React App]
 
 Install NodeJS packages with `yarn install` and run `yarn start` to start a dev server.
 
-Below you will find the generated information on how to perform common tasks for projects that have been created by "create-react-app".<br>
+Use `yarn test` to start the tests.
+
+Below you will find the generated information on how to perform common tasks for projects that have been created by "create-react-app".
+
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Table of Contents
