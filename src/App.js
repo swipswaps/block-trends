@@ -32,8 +32,7 @@ class App extends Component {
     let parser = new Parser();
     parser.parseURL(CORS_PROXY + TRENDS_URL, (err, parsed) => {
       if (!parsed) { return null; }
-      console.log(parsed)
-      parsed.feed.entries.forEach(function(entry) {
+      parsed.items.forEach(function(entry) {
         items.push({ title: entry.title, link: entry.link });
       })
       this.setState({ country: country, items: items });
